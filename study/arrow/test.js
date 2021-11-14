@@ -12,6 +12,10 @@ function test4() {
   return "yeah!";
 }
 
+function test5() {
+  return "yeah!";
+}
+
 (() => {
   console.log("yeah");
 })();
