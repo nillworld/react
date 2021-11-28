@@ -16,9 +16,15 @@ class Reservation extends React.Component {
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
 
+    // ES6
     this.setState({
       [name]: value,
     });
+
+    /* ES5
+    var partialState = {};
+    partialState[name] = value;
+    this.setState(partialState);*/
   }
 
   render() {
@@ -32,8 +38,12 @@ class Reservation extends React.Component {
         <label>
           Number of guests:
           <input name="numberOfGuests" type="number" value={this.state.numberOfGuests} onChange={this.handleInputChange} />
+          {/* <input name="numberOfGuests" type="text" value="some value"  /> */}
+          {/* <input name="numberOfGuests" type="text" value={null}  /> */}
         </label>
       </form>
     );
   }
 }
+
+export default Reservation;
