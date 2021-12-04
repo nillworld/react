@@ -1,3 +1,4 @@
+// https://ko.reactjs.org/docs/lifting-state-up.html
 import React from "react";
 
 function BoilingVerdict(props) {

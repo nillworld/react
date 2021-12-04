@@ -1,3 +1,5 @@
+// https://ko.reactjs.org/docs/lifting-state-up.html
+
 import React from "react";
 const scaleNames = {
   c: "Celsius",
