@@ -1,6 +1,7 @@
 // https://ko.reactjs.org/docs/lifting-state-up.html
 
 import React from "react";
+
 const scaleNames = {
   c: "Celsius",
   f: "Fahrenheit",
@@ -88,3 +89,5 @@ class Calculator3 extends React.Component {
   }
 }
 export default Calculator3;
+
+// (function에서) this는 인스턴스(함수에서 생성되는 object)
