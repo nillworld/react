@@ -44,6 +44,8 @@ class TemperatureInput extends React.Component {
     // Before: this.setState({temperature: e.target.value});
     this.props.onTemperatureChange(e.target.value);
   }
+  // 이들 메서드는 내부적으로 Calculator 컴포넌트가 새 입력값, 그리고 현재 수정한 입력 필드의 입력 단위와 함께
+  // this.setState()를 호출하게 함으로써 React에게 자신을 다시 렌더링하도록 요청합니다.
 
   render() {
     const temperature = this.props.temperature;
@@ -66,6 +68,8 @@ class Calculator3 extends React.Component {
   }
 
   handleCelsiusChange(temperature) {
+    console.log(2);
+
     this.setState({ scale: "c", temperature });
   }
 
@@ -74,6 +78,7 @@ class Calculator3 extends React.Component {
   }
 
   render() {
+    console.log(1);
     const scale = this.state.scale;
     const temperature = this.state.temperature;
     const celsius = scale === "f" ? tryConvert(temperature, toCelsius) : temperature;
